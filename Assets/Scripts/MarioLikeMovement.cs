@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MarioLikeMovement : MonoBehaviour
 {
+    [SerializeField]
+    private bool isMovementEnabled = true;
+
     public float walkSpeed = 5f;
     public float runSpeed = 10f;
     public float jumpForce = 10f;
@@ -14,7 +17,7 @@ public class MarioLikeMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
-    private bool isGrounded;
+    public bool isGrounded;
     private bool isJumping;
     private float jumpTimeCounter;
 
@@ -26,8 +29,13 @@ public class MarioLikeMovement : MonoBehaviour
 
     private void Update()
     {
+        if (!isMovementEnabled)
+        {
+            return; // Exit the function if movement is disabled
+        }
+
         // Check if the character is grounded
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        isGrounded = IsGrounded();
 
         // Character movement
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -49,7 +57,7 @@ public class MarioLikeMovement : MonoBehaviour
             jumpTimeCounter = maxJumpTime;
         }
 
-        if (Input.GetButtonDown("Jump") && isGrounded && !isJumping)
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             isJumping = true;
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -68,9 +76,17 @@ public class MarioLikeMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp("Jump"))
+        if (Input.GetButtonUp("Jump") && isJumping)
         {
             isJumping = false;
         }
+    }
+
+    private bool IsGrounded()
+    {
+        float raycastLength = 0.2f;
+        RaycastHit2D hit = Physics2D.Raycast(groundCheck.position, Vector2.down, raycastLength, groundLayer);
+
+        return hit.collider != null && !hit.collider.isTrigger;
     }
 }

@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Lethal Obstacle
   layers:
   - Default
   - TransparentFX
@@ -11,9 +12,9 @@ TagManager:
   - Phantoms
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Lethal Obstacle
+  - Player, Enemy Detection
+  - Rear Camera Collider
   - 
   - 
   - 
