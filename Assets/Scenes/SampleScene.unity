@@ -933,7 +933,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.23638642}
+  m_Offset: {x: 0.01190424, y: -0.30384433}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -944,7 +944,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.715471}
+  m_Size: {x: 0.833339, y: 0.5805552}
   m_EdgeRadius: 0
 --- !u!1 &354619329
 GameObject:
@@ -4629,6 +4629,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2610267919778977239, guid: ff8b9d7288b49d34491ec43d1385b190, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4375925
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610267919778977239, guid: ff8b9d7288b49d34491ec43d1385b190, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6796764
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610267919778977239, guid: ff8b9d7288b49d34491ec43d1385b190, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0021953583
+      objectReference: {fileID: 0}
+    - target: {fileID: 2610267919778977239, guid: ff8b9d7288b49d34491ec43d1385b190, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.02471608
+      objectReference: {fileID: 0}
     - target: {fileID: 3999136799681523126, guid: ff8b9d7288b49d34491ec43d1385b190, type: 3}
       propertyPath: m_Name
       value: '- Player'
@@ -4641,6 +4657,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 3eeddeff7553d4d47b41c7350d972087, type: 3}
+    - target: {fileID: 5957949781006007356, guid: ff8b9d7288b49d34491ec43d1385b190, type: 3}
+      propertyPath: jumpForce
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5957949781006007356, guid: ff8b9d7288b49d34491ec43d1385b190, type: 3}
+      propertyPath: maxJumpTime
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 6197408461275735659, guid: ff8b9d7288b49d34491ec43d1385b190, type: 3}
       propertyPath: m_SizeDelta.x
       value: 108
@@ -4771,7 +4795,9 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Sprite
       Ref","value":{"$content":0,"$type":"UnityEngine.Object"},"typeHandle":{"Identification":"UnityEngine.GameObject,
-      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null","$version":"A"},"$version":"A"},{"name":"Is
+      Dead","value":{"$content":false,"$type":"System.Boolean"},"typeHandle":{"Identification":"System.Boolean,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 3272592951837822976}
 --- !u!1660057539 &9223372036854775807
