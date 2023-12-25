@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Lethal Obstacle
+  - End of Level Goal
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - Lethal Obstacle
   - Player, Enemy Detection
   - Rear Camera Collider
-  - 
+  - End of Level Goal
   - 
   - 
   - 
