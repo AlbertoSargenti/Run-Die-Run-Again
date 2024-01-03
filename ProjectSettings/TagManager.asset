@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Lethal Obstacle
   - End of Level Goal
+  - Ghost
+  - Debug
+  - Arrow Spawn Point
+  - Active Trap
+  - Non-Active Trap
   layers:
   - Default
   - TransparentFX
@@ -17,7 +22,7 @@ TagManager:
   - Player, Enemy Detection
   - Rear Camera Collider
   - End of Level Goal
-  - 
+  - No Player Collision
   - 
   - 
   - 
